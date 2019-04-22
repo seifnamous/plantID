@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  .button {
+    color: Black;
+  }
+  
+  .navbar-header {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-brand {float:none;}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="home">PlantID</a>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Plant Indentification With Deep Learning</h3>
+  <img src="../static/image_website/home.png" class="img-responsive img-circle margin" style="display:inline" alt="flower" width="200" height="350">
+  <center>
+  <form id = "upload-form" action="{{url_for('predict')}}" method ="POST" enctype = "multipart/form-data">
+          <input id="file-picker" type = "file" name = "flower" accept="image/*" multiple>
+          <input type = "submit" value = "Predict" class="button">
+    </form><br><br>
+  </center>
+</div>
+
+    
+
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">How it works ?</h3>
+  <p>To identify a plant you simply need to upload a photo of the plant and ask tha app to identify it!
+PlantID can currently recognize 85% of five types of flowers and will be upgraded soon to include more species</p>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-left">  
+  <center>  
+  <h3 class="margin">Whar are the types of plants than can be identified ?</h3><br>
+  <div class="row">
+    <div class="col-sm-2">
+      <h2>Daisy</h2>
+      <img src="../static/image_website/daisy.jpeg" class="img-responsive margin"  style="width:50%"  alt="Image">
+    </div>
+    <div class="col-sm-2"> 
+      <h2>Dandelion</h2>
+      <img src="../static/image_website/dandelion.jpeg" class="img-responsive margin" style="width:50%"  alt="Image">
+    </div>
+    <div class="col-sm-2"> 
+      <h2>Rose</h2>
+      <img src="../static/image_website/rose.jpeg" class="img-responsive margin" style="width:50%"   alt="Image">
+    </div>
+    <div class="col-sm-2"> 
+      <h2>Sunflower</h2>
+      <img src="../static/image_website/tulip.jpeg" class="img-responsive margin" style="width:50%"   alt="Image">
+    </div>
+    <div class="col-sm-2"> 
+      <h2>Tulip</h2>
+      <img src="../static/image_website/rose.jpeg" class="img-responsive margin" style="width:50%"  alt="Image">
+    </div>
+  </div>
+</center>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Seifeddine Namous <a href="https://www.w3schools.com">https://www.linkedin.com/in/senamous/</a></p> 
+</footer>
+
+</body>
+</html>
